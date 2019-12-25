@@ -46,6 +46,7 @@ ol > li::first-letter {
 .chess {
     margin-bottom: 10px;
     border-collapse: collapse;
+    cursor: pointer;
 }
 
 .chess td {
