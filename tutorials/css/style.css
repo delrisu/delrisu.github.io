@@ -13,17 +13,19 @@
 }
 
 body {
-    background-image: url('https://images.wallpaperscraft.com/image/circles_colorful_rainbow_137437_3840x2400.jpg');
+    background-image:
+            url("https://www.itl.cat/pngfile/big/26-265783_landscape-4k-wallpaper-download-hd-for-pc-samsung.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
 }
 ol {
-    background-color: tomato;
+    background: rgba(125,125,125,0.75);
     text-align: justify;
 }
 ol li {
-    background: #ffe5e5;
+    background: rgba(255,255,255,1);
     padding: 5px;
     margin-right: 35px;
 }
@@ -33,14 +35,28 @@ ol > li::first-letter {
     font-size: xx-large;
 }
 
-.fucked {
-    transition: transform 1s linear;
+.animated ul {
+    transition: transform 0.2s linear;
 }
 
-.fucked:hover {
-    -ms-transform: rotate(10deg); /* IE 9 */
-    -webkit-transform: rotate(10deg); /* Safari prior 9.0 */
-    transform: rotate(10deg); /* Standard syntax */
+.animated ul:nth-child(odd) {
+    background: rgba(255,255,255,0.75);
+}
+
+.animated ul:nth-child(even) {
+    background: rgba(125,125,125,0.75);
+}
+
+.animated ul:nth-child(odd):hover {
+     -ms-transform: rotate(2deg); /* IE 9 */
+     -webkit-transform: rotate(2deg); /* Safari prior 9.0 */
+     transform: rotate(2deg); /* Standard syntax */
+}
+
+.animated ul:nth-child(even):hover {
+    -ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(-2deg); /* Safari prior 9.0 */
+    transform: rotate(-2deg); /* Standard syntax */
 }
 
 .chess {
@@ -71,7 +87,7 @@ ol > li::first-letter {
 }
 
 .parallax {
-    background-image: url("https://wallpaperaccess.com/full/422708.jpg");
+    background-image: url("https://wallpaperaccess.com/full/38580.jpg");
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -81,6 +97,13 @@ ol > li::first-letter {
 
 @media only screen and (max-device-width: 1366px) {
     .parallax {
-        background-attachment: scroll;
+        display: none;
     }
+}
+
+h2 {
+    margin-left: 4vw;
+    margin-bottom: 1vw;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
 }
