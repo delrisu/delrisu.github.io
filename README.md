@@ -2,4 +2,4 @@
 
 ## Linki:
 
-[tutorials](https://https://delrisu.github.io/tutorials/)
+[tutorials](https://delrisu.github.io/tutorials/)
