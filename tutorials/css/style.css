@@ -67,28 +67,31 @@ ol > li::first-letter {
 }
 
 .chess td {
-    width: 4vw; height: 4vw;
+    width: 3vw; height: 3vw;
 }
 
 .chess tr:nth-child(odd) td:nth-child(odd), .chess tr:nth-child(even) td:nth-child(even){
-    background: black;
+    background-color: black;
+    transition: background-color 4s;
 }
 
 .chess tr:nth-child(odd) td:nth-child(even), .chess tr:nth-child(even) td:nth-child(odd){
-    background: white;
+    background-color: white;
+    transition: background-color 4s;
 }
 
 .chess tr:nth-child(odd) td:nth-child(even):hover,.chess tr:nth-child(even) td:nth-child(odd):hover {
-    background: lime;
+    background-color: lime;
+    transition: background-color 0.1s;
 }
 
 .chess tr:nth-child(odd) td:nth-child(odd):hover,.chess tr:nth-child(even) td:nth-child(even):hover {
-    background: red;
+    background-color: red;
+    transition: background-color 0.1s;
 }
 
 .parallax {
-    background-image: url("https://wallpaperaccess.com/full/38580.jpg");
-    height: 500px;
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
