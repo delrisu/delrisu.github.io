@@ -28,8 +28,7 @@ ol li {
   padding: 5px;
   margin-right: 35px;
 }
-
-ol > li::first-letter {
+ol li::first-letter {
   color: #ff0000;
   font-size: xx-large;
 }
@@ -61,17 +60,15 @@ ol > li::first-letter {
 }
 
 .chess {
-  margin-bottom: 10px;
+  margin: 0 auto;
   border-collapse: collapse;
   cursor: pointer;
   user-select: none;
 }
-
 .chess td {
   width: 3vw;
   height: 3vw;
 }
-
 .chess tr:nth-child(odd) td:nth-child(odd) {
   background-color: black;
   transition: background-color 4s;
@@ -113,16 +110,17 @@ ol > li::first-letter {
   background-size: cover;
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    display: none;
-  }
-}
 h2 {
   margin-left: 4vw;
   margin-bottom: 1vw;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: white;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styleSass.css.map */
