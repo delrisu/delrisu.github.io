@@ -1,4 +1,5 @@
-#butx a:link, #butx a:visited {
+#butx a:link,
+#butx a:visited {
   background-color: #ffcd46;
   color: black;
   padding: 5px 20px;
@@ -8,7 +9,8 @@
   border-radius: 5px;
 }
 
-#butx a:hover, #butx a:active {
+#butx a:hover,
+#butx a:active {
   background-color: red;
 }
 
@@ -23,35 +25,42 @@ ol {
   background: rgba(125, 125, 125, 0.75);
   text-align: justify;
 }
+
 ol li {
   background: white;
   padding: 5px;
   margin-right: 35px;
 }
+
 ol li::first-letter {
   color: #ff0000;
   font-size: xx-large;
 }
 
 .animated ul {
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
+
 .animated ul:nth-child(odd) {
   background: rgba(255, 255, 255, 0.75);
 }
+
 .animated ul:nth-child(odd):hover {
-  -ms-transform: rotate(2deg);
   /* IE 9 */
   -webkit-transform: rotate(2deg);
   /* Safari prior 9.0 */
   transform: rotate(2deg);
   /* Standard syntax */
 }
+
 .animated ul:nth-child(even) {
   background: rgba(125, 125, 125, 0.75);
 }
+
 .animated ul:nth-child(even):hover {
-  -ms-transform: rotate(-2deg);
   /* IE 9 */
   -webkit-transform: rotate(-2deg);
   /* Safari prior 9.0 */
@@ -63,42 +72,62 @@ ol li::first-letter {
   margin: 0 auto;
   border-collapse: collapse;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 .chess td {
   width: 3vw;
   height: 3vw;
 }
+
 .chess tr:nth-child(odd) td:nth-child(odd) {
   background-color: black;
+  -webkit-transition: background-color 4s;
   transition: background-color 4s;
 }
+
 .chess tr:nth-child(odd) td:nth-child(odd):hover {
   background-color: red;
+  -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
+
 .chess tr:nth-child(odd) td:nth-child(even) {
   background-color: white;
+  -webkit-transition: background-color 4s;
   transition: background-color 4s;
 }
+
 .chess tr:nth-child(odd) td:nth-child(even):hover {
   background-color: lime;
+  -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
+
 .chess tr:nth-child(even) td:nth-child(even) {
   background-color: black;
+  -webkit-transition: background-color 4s;
   transition: background-color 4s;
 }
+
 .chess tr:nth-child(even) td:nth-child(even):hover {
   background-color: red;
+  -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
+
 .chess tr:nth-child(even) td:nth-child(odd) {
   background-color: white;
+  -webkit-transition: background-color 4s;
   transition: background-color 4s;
 }
+
 .chess tr:nth-child(even) td:nth-child(odd):hover {
   background-color: lime;
+  -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
 
@@ -122,5 +151,4 @@ h2 {
     display: none;
   }
 }
-
 /*# sourceMappingURL=styleSass.css.map */
