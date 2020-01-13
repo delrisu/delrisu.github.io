@@ -90,7 +90,7 @@ ol li::first-letter {
 }
 
 .chess tr:nth-child(odd) td:nth-child(odd):hover {
-  background-color: red;
+  background-color: grey;
   -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
@@ -102,7 +102,7 @@ ol li::first-letter {
 }
 
 .chess tr:nth-child(odd) td:nth-child(even):hover {
-  background-color: lime;
+  background-color: lightgrey;
   -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
@@ -114,7 +114,7 @@ ol li::first-letter {
 }
 
 .chess tr:nth-child(even) td:nth-child(even):hover {
-  background-color: red;
+  background-color: grey;
   -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
@@ -126,7 +126,7 @@ ol li::first-letter {
 }
 
 .chess tr:nth-child(even) td:nth-child(odd):hover {
-  background-color: lime;
+  background-color: lightgrey;
   -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
