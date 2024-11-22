@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczanie EDB</title>
+</head>
+<body>
+    <h1>Obliczanie EDB</h1>
+    <form id="edbForm">
+        <label for="AP">AP:</label>
+        <input type="number" id="AP" name="AP" value="20000" step="0.01"><br><br>
+
+        <label for="t">t:</label>
+        <input type="number" id="t" name="t" value="32" step="0.01"><br><br>
+
+        <label for="R">R:</label>
+        <input type="number" id="R" name="R" value="60"><br><br>
+
+        <label for="rd">r_d:</label>
+        <input type="number" id="rd" name="rd" value="2.85" step="0.0001"><br><br>
+
+        <button type="button" onclick="calculateEDB()">Oblicz EDB</button>
+    </form>
+
+    <h2>Wynik EDB: <span id="result">-</span></h2>
+
+    <script>
+        function calculateEDB() {
+            // Pobierz wartości z formularza
+            const AP = parseFloat(document.getElementById('AP').value);
+            const t = parseFloat(document.getElementById('t').value);
+            const R = parseInt(document.getElementById('R').value, 10);
+            const rd = parseFloat(document.getElementById('rd').value) / 12;
+
+            // Obliczanie A_i
+            const A_i = AP / R;
+
+            // Obliczanie sumy sigma
+            let sigma_sum = 0;
+            for (let i = 1; i <= R; i++) {
+                sigma_sum += A_i * t/100 * Math.pow(1 / (1 + rd/100), i);
+            }
+
+            // Obliczanie EDB
+            const EDB = AP * t/100 - sigma_sum;
+
+            // Wyświetlenie wyniku
+            document.getElementById('result').textContent = EDB.toFixed(2);
+        }
+    </script>
+</body>
+</html>
